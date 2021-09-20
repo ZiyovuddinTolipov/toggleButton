@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap');
+
+*{
+    box-shadow: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+margin: 0;
+width: 100%;
+height: 100%;
+background: #d1dad3;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 17px;
+}
+.container {
+  
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.switch-holder{
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch-label{
+    width: 150px;
+}
+.switch-label i {
+    
+    margin-right: 5px;
+    box-shadow:  20px 20px 60px #5a5a5a,
+             -20px -20px 60px #ffffff;
+             color: #00c040;
+}
+.switch-toggle{
+    height: 40px;
+}
+.switch-toggle input[type='checkbox']{
+    position: absolute;
+    opacity: 0;
+    z-index: -2;
+}
+.switch-toggle input[type='checkbox'] +label {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0;
+    cursor: pointer;
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+.switch-toggle input[type='checkbox'] +label::before{
+    position: absolute;
+    content: 'OFF';
+    font-size: 13px;
+    text-align: center;
+    line-height: 25px;
+    top: 8px;
+    left: 8px;
+    width: 45px;
+    height: 25px;
+    border-radius: 20px;
+background: linear-gradient(225deg, #f8f8f8, #d1d1d1);
+box-shadow:  -5px 5px 100px #767676,
+             5px -5px 100px #ffffff;;
+ transition: 0.3s ease-in-out;
+}
+.switch-toggle input[type="checkbox"]:checked+ label::before { 
+    left: 50%; 
+    content:"ON"; 
+    color:#fff; 
+    background: linear-gradient(315deg, #00c040, #00a136);
+    box-shadow:  -5px -5px 5px #006422,;}
